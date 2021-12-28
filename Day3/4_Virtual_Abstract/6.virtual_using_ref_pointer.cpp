@@ -27,7 +27,7 @@ void Calling(Animal *ptr){
 }
 int main(){
   cout<<"Virtual Function Calling using with Pointer"<<endl;
-  Animal *A;
+  Animal *A; // A->eat(); , A.eat()
   Cat catObject;
   Cow cowObject;
 

@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// // It will be for only integer type, we can have template and have many types
+// It will be for only integer type, we can have template and have many types
 // struct forLambda{
 //     int operator()(int x, int y)const{
 //         return x+y;
@@ -18,7 +18,7 @@ int main(){
     //Lambda Expressions are internally implimented as function object
     // compiler creates a class and overloads the function call operator in it
     // And the overloaded function call operator will contain the implimentation of the body
-
+    //
     // [](){
     //     cout<<"Lambda Expressions are created\n";
     // }();

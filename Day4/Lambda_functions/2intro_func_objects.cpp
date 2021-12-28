@@ -40,7 +40,7 @@ int main(){
 
     Comp3 comp; // for comp has an instance, and it will have the state
     //Member function call
-    comp(5,4); // comp.operator()(5,4); it is an syntatic sugar
+    // cout<<comp(5,4)<<endl; // comp.operator()(5,4); it is an syntatic sugar
     int arr[]{4,7,9,2,5};
     for(auto x: arr){
         cout<<x<<" ";

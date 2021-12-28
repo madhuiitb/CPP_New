@@ -18,11 +18,15 @@ public:
 
 
 class Employee{
+    //int x;
     Project *prj{};
   public:
+      //int a
     void SetProject(Project *prj1){
       prj = prj1;
+      //x=a
     }
+
     const Project * GetProject()const{
       return prj;
     }
@@ -48,9 +52,11 @@ int main(){
 
   prj2->ShowProjectDetails();
 
+  cout<<"prj "<<prj2<<endl;
   delete prj2;
   delete e1;
   delete e2;
   delete e3;
+ cout<<"prj "<<prj2<<endl;
 
 }

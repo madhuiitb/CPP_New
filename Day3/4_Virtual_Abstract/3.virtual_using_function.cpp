@@ -7,13 +7,20 @@ public:
 virtual  void eat(){
     cout<<"Animal eats generic food"<<endl;
   }
+
+  virtual ~Animal(){
+      cout<<"Destructord called\n";
+  }
 };
+
+
 
 class Cat: public Animal{
 public:
   void eat(){
     cout<<"Cat eats non-veg food"<<endl;
   }
+
 };
 
 

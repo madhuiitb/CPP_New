@@ -7,8 +7,8 @@ class Employee;
 
 class Project{
 public:
-//  shared_ptr<Employee> emp_p;
-  weak_ptr<Employee> emp_p;
+  shared_ptr<Employee> emp_p;
+ // weak_ptr<Employee> emp_p;
   Project(){
     cout<<"Project Constructor::-"<<endl;
   }
@@ -21,8 +21,8 @@ public:
 
 class Employee{
 public:
-//  weak_ptr<Project> prj_p;
-  shared_ptr<Project> prj_p;
+  weak_ptr<Project> prj_p;
+//  shared_ptr<Project> prj_p;
   Employee(){
     cout<<"Employee Constructor::-"<<endl;
   }
@@ -40,7 +40,7 @@ int main(){
   e1->prj_p = prj2;
   prj2->emp_p = e1;
 
-  // delete e1;
+   //delete e1;
   // delete prj2;
 
 }

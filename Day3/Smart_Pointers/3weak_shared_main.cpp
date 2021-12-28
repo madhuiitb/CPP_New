@@ -9,8 +9,9 @@ public:
       ptr = p;
     }
     void Print(){
-      
-      cout<<"reference count::-- "<<ptr.use_count()<<endl;  // It will give 2 if the pointer that mentioned is less than 50 o.w it will give ref count 1
+
+      cout<<"reference count::-- "<<ptr.use_count()<<endl;
+      // It will give 2 if the pointer that mentioned is less than 50 o.w it will give ref count 1
       // The above statement is giving an extra mapping of the pointer.
       // We need to avoid that. will look that in other example.
       // The weak pointer is needs to be addressed

@@ -33,7 +33,7 @@ int main(){
         cout<<x<<" ";
     }
     cout<<"\n";
-    Sort(arr, Comp2);
+    Sort(arr, Comp);
     for(auto x: arr){
         cout<<x<<" ";
     }

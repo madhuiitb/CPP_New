@@ -50,9 +50,9 @@ int main(){
   cout<<"reference Count::---"<<prj2.use_count()<<endl; //It has to use only for debuggin
   prj2->ShowProjectDetails();
 
-  
-  e3.reset(); //when you reset the value then automatically it will decrement the reference Count
 
+  e3.reset(); //when you reset the value then automatically it will decrement the reference Count
+  e2.reset();
 
   cout<<"reference Count::---"<<prj2.use_count()<<endl;
 

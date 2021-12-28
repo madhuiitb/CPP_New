@@ -25,6 +25,7 @@ class Cow: public Animal{
 void Calling(Animal *ptr){
   ptr->eat();
 }
+
 int main(){
   cout<<"Virtual Function Calling using with Pointer"<<endl;
   Animal *A;
