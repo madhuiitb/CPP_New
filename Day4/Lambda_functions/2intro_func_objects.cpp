@@ -34,6 +34,7 @@ struct Comp3{
         return x>y;
     }
 };
+
 int main(){
 
     Comp(3,5); //Global function call
@@ -46,7 +47,8 @@ int main(){
         cout<<x<<" ";
     }
     cout<<"\n";
-    Sort(arr, comp);
+    // Sort(arr, Comp2);
+    Sort(arr, comp); // function object calling
     for(auto x: arr){
         cout<<x<<" ";
     }

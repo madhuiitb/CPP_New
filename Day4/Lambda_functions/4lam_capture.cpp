@@ -52,7 +52,16 @@ int main(){
     // Sort(arr, );
 
     auto comp4 = [](auto x, auto y){return x<y; };
+
     Sort(arr, comp4);
+
+    for(auto x: arr){
+        cout<<x<<" ";
+    }
+    cout<<"\n";
+
+    auto comp5 = [](auto x, auto y){return x>y; };
+    Sort(arr, comp5);
 
     for(auto x: arr){
         cout<<x<<" ";

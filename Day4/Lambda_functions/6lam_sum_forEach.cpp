@@ -82,12 +82,13 @@ int main(){
     //  [sum, offset] is equal to [=] it is saying you can capture all the variables by value
     //  [=, &sum] it is saying you can capture all the variables by value except sum
     //  [&, sum] it is saying you can capture all the variables by reference except sum
-    //  [this] it is saying you can capture all the member variables 
+    //  [this] it is saying you can capture all the member variables
     // One major important is it will capture all the variables which are declared above the Lambda Expressions
     // If you declare the any variables after the Lambda expression it will not capture
     ForEach(arr, [&sum, &offset](auto &x){ // To modify any value in the Lambda need to use mutable
         sum+=x;
-        //cout<<x<<" ";
+        ++offset;
+        cout<<sum<<" --off-- "<<offset<<" ";
     });
     cout<<"Sum ::- "<<sum<<endl;
     ForEach(arr, [](auto x){
