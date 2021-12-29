@@ -88,7 +88,8 @@ int main(){
     // });
 
 
-    //If a Lambda Expression does not specify a capture clause  then it automatically decomposes into a function pointer
+    //If a Lambda Expression does not specify a capture clause
+    // then it automatically decomposes into a function pointer
     // that means you can use Lambda Expressions are Callback functions in C++
 
     // Product p{ "Watch", 500};
