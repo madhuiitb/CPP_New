@@ -31,7 +31,7 @@ public:
 
 int main () {
     A<int> a1 (7);
-    A<char> a2 ('s');
+    A<char> a2 ('B');
     A<double> a3(11.0);
 
     cout<<"Incremented int value: "<< a1.Increment()<< endl;

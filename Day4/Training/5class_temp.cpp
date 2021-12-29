@@ -22,7 +22,7 @@ int main(){
     Calculator<int> c1(2,3);
     cout<<c1.add()<<endl;
 
-    Calculator<double> c2(2.3,5.3);
+    Calculator<int> c2(2.3,5.3); // 2-5=> -3
     cout<<c2.sub()<<endl;
 
     Calculator<float> c3(6.6f,2.1f);

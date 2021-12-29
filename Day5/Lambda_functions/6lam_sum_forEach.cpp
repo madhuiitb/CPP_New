@@ -85,10 +85,11 @@ int main(){
     //  [this] it is saying you can capture all the member variables
     // One major important is it will capture all the variables which are declared above the Lambda Expressions
     // If you declare the any variables after the Lambda expression it will not capture
+
     ForEach(arr, [&sum, &offset](auto &x){ // To modify any value in the Lambda need to use mutable
         sum+=x;
         ++offset;
-        cout<<sum<<" --off-- "<<offset<<" ";
+        cout<<sum<<" --off-- "<<offset<<"\n ";
     });
     cout<<"Sum ::- "<<sum<<endl;
     ForEach(arr, [](auto x){

@@ -12,7 +12,7 @@ void fun(T y , U z){
   cout << "Value->z: " <<z<<endl;
 }
 int main(){
-   fun(20);
-   fun(2,2.1);
+  //fun(20);
+  fun(2,2.1);
    return 0;
 }

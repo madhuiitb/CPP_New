@@ -7,6 +7,7 @@ using namespace std;
 
 //using Comparator = bool(*)(int, int); //It's an alias
 //template<typename T, int size>
+
 template<typename T, int size, typename Comparator>
 void Sort(T (&arr)[size], Comparator comp){
     for(int i=0;i<size;i++){

@@ -68,6 +68,7 @@ public:
         ForEach(taxes, [basePrice, this](float tax){
             float taxedPrice = basePrice*tax/100;
             price+=taxedPrice;
+            //cout<<"this:- "<<this<<endl;
         });
     }
     float GetPrice()const{
@@ -92,20 +93,20 @@ int main(){
     // then it automatically decomposes into a function pointer
     // that means you can use Lambda Expressions are Callback functions in C++
 
-    // Product p{ "Watch", 500};
-    // p.AssignFinalPrice();
-    // std::cout << "Final Price::- " <<p.GetPrice()<< '\n';
+    Product p{ "Watch", 500};
+    p.AssignFinalPrice();
+    std::cout << "Final Price::- " <<p.GetPrice()<< '\n';
 
-    [](int x){
-        x*=3;
-        [](int x){
-            cout<<"X::- "<<x<<endl;
-        }(x);
-    }(10);
-
-    testOffset<int> to(3);
-    int x=5;
-    to(x);
+    // [](int x){
+    //     x*=3;
+    //     [](int x){
+    //         cout<<"X::- "<<x<<endl;
+    //     }(x);
+    // }(10);
+    //
+    // testOffset<int> to(3);
+    // int x=5;
+    // to(x);
     int arr[]{4,7,9,2,5};
     ForEach(arr, [](auto x){
         cout<<x<<" ";

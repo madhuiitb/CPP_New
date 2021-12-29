@@ -11,11 +11,13 @@ int main(){
     cout<<"Max Int::- "<<Max(115, 101)<<endl;
     cout<<"Max float::- "<<Max(10.15f, 10.1f)<<endl;
     cout<<"Max double1::- "<<Max(1.15, 10.1)<<endl;
-    cout<<"Max char::- "<<Max('B', 'b')<<endl;
+    cout<<"Max char::- "<<Max('B', 'X')<<endl;
     //we are providing the return type, so compiler automatically deduced to double
-    cout<<"Max double::- "<<Max<double>(11.5, 10)<<endl;
+    cout<<"Max double::- "<<Max<int>(11.5, 10)<<endl;
     //we are doing type conversion, so compiler automatically deduced to float
     cout<<"Max float::- "<<Max(static_cast<float>(10), 10.1f)<<endl;
 
     return 0;
 }
+
+//(float*)(10);

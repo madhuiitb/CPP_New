@@ -20,7 +20,7 @@ int main () {
   A <int> obj1 (100, 75);
   cout<<"Maximum of 100 and 75 = "<<obj1.getMaxval()<<endl;
 
-  A<char> obj2('a','A');
+  A<char> obj2('b','A');
   cout<<"Maximum of 'A' and 'a' = "<<obj2.getMaxval()<<endl;
 
   return 0;

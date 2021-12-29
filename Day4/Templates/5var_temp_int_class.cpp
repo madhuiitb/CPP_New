@@ -58,8 +58,8 @@ template<typename T, typename ...Params>
 //Function parameter pack that will be automatically executed by the Compiler
 // will use recursion to access the elements
 void Print(T a, Params... args){
-  cout<<sizeof...(args)<<endl;
-  cout<<sizeof...(Params)<<endl;
+  //cout<<sizeof...(args)<<endl;
+  //cout<<sizeof...(Params)<<endl;
   cout<<a;
   if(sizeof...(args)!=0){
      cout<<"\n";
@@ -83,6 +83,6 @@ int main(){
  // Print({1,2.5f,3,4}); // it will give the error, to overcome that error will use variadic templates
 //  Print(1,2.5,"A",4.4);
   Integer val{ 1 };
-  Print(0, val, Integer{ 2 });
+  Print(Integer{ 2 },0, val, 5.5);
   return 0;
 }

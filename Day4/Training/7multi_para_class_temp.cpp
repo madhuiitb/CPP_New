@@ -25,7 +25,7 @@ int main(){
     MultipleParameters<int,double> obj1(4,3.8,'c');
     obj1.Print();
 
-    MultipleParameters<int,float,bool> obj2(4,3.8,true);
+    MultipleParameters<int,float,bool> obj2(4,3.8,false);
     obj2.Print();
     return 0;
 }

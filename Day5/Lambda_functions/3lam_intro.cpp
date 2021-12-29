@@ -41,7 +41,7 @@ int main(){
         return x+y;
     };
 
-    auto sum2 = [](int x, int y)->double { //With return type
+    auto sum2 = [](int x, int y)->double { //With return type also called Trailing return type
         if(true)
             return 9.0;
         return x+y;
@@ -52,7 +52,7 @@ int main(){
     cout<<"Lambda Sum2::-"<<sum2(76,5)<<endl;
 
      forLambda fl;
-    //forLambda<int> fl;
+    //forLambda<int> f1;
     cout<<"Struct Sum::-"<<fl(4,5)<<endl;
     return 0;
 }

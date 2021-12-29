@@ -9,7 +9,7 @@ T MAX(T x, T y){
   return x>y?x:y;
 }
 //Explicit instantiated
-template char MAX(char a, char b); //Compiler will automatically instantiated this MAX char method
+//template char MAX(char a, char b); //Compiler will automatically instantiated this MAX char method
 //
 // //Explicit Specialization
 template<>
@@ -25,9 +25,9 @@ const char* MAX(const char *a, const char *b){
 // }
 
 int main(){
-  const char *a{"z"};
+  const char *a{"b"};
   const char *b{"A"};
-  auto max1 =  MAX(*a,*b);
+  auto max1 =  MAX(a,b);
   cout<<"Maximum number::- "<<max1;
   return 0;
 }
