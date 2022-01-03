@@ -12,10 +12,10 @@ int main(){
             };
     fun();
 
-    auto fun1 = [](int a, int b){
+    auto fun1 = [](int a=0, int b=1){
                     cout<<"Lambda function executed\t"<<a+b<<endl;
             };
-    fun1(3,4);
+    fun1();
 
     int x=10;
     auto fun2 = [x](int a, int b){

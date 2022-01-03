@@ -22,11 +22,11 @@ void Sort(T (&arr)[size], U comp){
     }
 }
 // These are the predicates for the comparision of the two elements
-bool Comp(int x, int y){
+bool greater1(int x, int y){
     return x>y;
 }
 
-bool Comp2(int x, int y){
+bool lesser1(int x, int y){
     return x<y;
 }
 
@@ -39,7 +39,8 @@ struct Comparator3{
 int main(){
 
     //Comp(3,5); //Global function call
-
+    greater1(2,3);
+    //();
     Comparator3 comp; // for comp has an instance, and it will have the state
     //Member function call
     // cout<<comp(5,4)<<endl; // comp.operator()(5,4); it is an syntatic sugar
