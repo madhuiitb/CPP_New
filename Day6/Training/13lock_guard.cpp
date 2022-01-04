@@ -6,13 +6,17 @@ using namespace std;
 int count=0;
 
 std::mutex m1;
+
 void task(const char* threadNumber, int loopFor){
-    lock_guard<mutex> lock(m1);
+
     //m.lock();
+    //t1, t2
+
     for(int i=0;i<loopFor;i++){
+        lock_guard<mutex> lg(m1);
         count++;
         cout<<threadNumber<<"\t"<< count<<endl;
-    }
+    } // count =2, i=3,
 
     //m.unlock();
 }

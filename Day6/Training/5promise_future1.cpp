@@ -3,15 +3,14 @@
 #include <thread>
 #include <utility>
 
-void product(std::promise<int>&& intPromise, int a, int b){
-  intPromise.set_value(a*b);
+void product(std::promise<int>&& p1, int a, int b){
+  p1.set_value(a*b);
 }
 
 struct Div{
-  void operator() (std::promise<int>&& intPromise, int a, int b) const {
-    intPromise.set_value(a/b);
+  void operator() (std::promise<int>&& p2, int a, int b) const {
+    p2.set_value(a/b);
   }
-
 };
 
 int main(){

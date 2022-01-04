@@ -17,8 +17,14 @@ void ThreadFunctionValue(int x){
 }
 
 int main(){
-    thread th1(ThreadFunction1);
-    thread th2(ThreadFunctionValue, 5);
+
+     thread t1(ThreadFunction1);
+     thread t2(ThreadFunctionValue, 5);
+    //
+    // ThreadFunction1(); //t1
+    // ThreadFunctionValue(3); //t2
     cout<<"th1 and th2 are executing concurrently\n";
+    t1.join(); // Wait till I finish the process
+    t2.join(); // wait 
     return 0;
 }

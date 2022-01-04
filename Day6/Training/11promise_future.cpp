@@ -7,7 +7,12 @@ using namespace std;
 using namespace std::chrono;
 typedef unsigned long long ull;
 
-
+// void findEven(int start, int end){
+//     fot(int i=start; i<=end;i++){
+//         if(i%2==0)
+//             evenSum+=i;
+//     }
+// }
 
 
 
@@ -34,28 +39,30 @@ void findOdd(promise<ull>&& oddSumPromise, ull start, ull end){
     oddSumPromise.set_value(oddSum);
 }
 
+
 int main(){
     cout<<"Main started\n";
     cout<<"---------------------------\n";
     ull start=0, end=19000000000;
 
-    auto startTime = high_resolution_clock::now();
+    //auto startTime = high_resolution_clock::now();
     // findOdd(start,end);
     // findEven(start,end);
-    promise<ull> oddSum;
-    future<ull> oddFuture = oddSum.get_future();
 
-    promise<ull> evenSum;
-    future<ull> evenFuture = evenSum.get_future();
+    // promise<ull> oddSum;
+    // future<ull> oddFuture = oddSum.get_future();
+
+    promise<ull> evenSum; //set_value // set_exception
+    future<ull> evenFuture = evenSum.get_future(); //get_future
 
     cout<<"Threads Cretead\n";
-//    thread t1(findEven, move(oddSum), start, end);
-    thread t2(findOdd, move(evenSum), start, end);
+//    thread t1(findOdd, move(oddSum), start, end);
+    thread t2(findEven, move(evenSum), start, end);
 
 
 
-    auto stopTime = high_resolution_clock::now();
-    auto totalTime = duration_cast<microseconds>(stopTime - startTime);
+//    auto stopTime = high_resolution_clock::now();
+//    auto totalTime = duration_cast<microseconds>(stopTime - startTime);
 
     cout<<"waiting for results\n";
     //cout<<"oddSum:- "<<oddFuture.get()<<"\n";

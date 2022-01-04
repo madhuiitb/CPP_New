@@ -53,6 +53,5 @@ int main(){
     thread_fobj1.join();
     thread_fobj2.join();
     thread_fobj3.join();
-
     return 0;
 }
